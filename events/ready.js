@@ -6,6 +6,11 @@ module.exports = {
 	name: 'ready',
 	once: true,
 	execute(client) {
+		client.user
+			.setAvatar(profilePicture)
+			.catch((err) => {
+				console.log('Set profile picture failed! ' + err, 'WARN');
+			});
 		console.log(`Bot is ready! ${client.user.tag}`);
 	},
 };

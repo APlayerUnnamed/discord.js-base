@@ -11,7 +11,7 @@ module.exports = { // Exports from the file
 		name: 'getBotPing',
 	},
 
-	async execute(interaction, client) {
+	async execute(interaction) {
 		const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
@@ -22,7 +22,7 @@ module.exports = { // Exports from the file
 			);
 		const embed = new MessageEmbed()
 			.setTitle('Bot Data')
-			.setDescription(`Latency is \`${Date.now() - interaction.createdTimestamp}ms\`\nAPI Latency is \`${Math.round(client?.ws?.ping)}ms\``)
+			.setDescription(`Latency is \`${Date.now() - interaction.createdTimestamp}ms\`\nAPI Latency is \`${Math.round(client.ws.ping)}ms\``)
 			.setColor('#2f3136');
 		interaction.update({ embeds: [embed], components: [row], ephemeral: true });
 	},

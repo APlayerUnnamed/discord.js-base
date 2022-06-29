@@ -6,11 +6,12 @@
 // Import discord.js
 const { Client, Intents } = require('discord.js');
 // Import our token and client id
-const { token } = require('./config.json');
+const { token, profilePicture } = require('./config.json');
 // Import file system
 global.fs = require('fs');
 global.path = require('path');
 
+global.profilePicture = profilePicture;
 
 // An formated date
 global.dateFormated = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
