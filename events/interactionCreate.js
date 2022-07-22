@@ -1,5 +1,5 @@
-// Command/button handeler
-// Runs on the corrosponding event
+// Command/button handler
+// Runs on the corresponding event
 // MIT License - Copyright (c) 2022 APlayerUnnamed
 // View LICENSE for more information
 
